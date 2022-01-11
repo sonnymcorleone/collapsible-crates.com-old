@@ -59,25 +59,6 @@ function ready(callback){
 
 
 
-function showAlert(){
-  let alertWrapper = document.getElementById('alertWrapper');
-  alertWrapper.style.display="block";
-
-  setTimeout(() => {
-    alertWrapper.style.display="none";
-  }, 2000)
-}
-
-
-
-function showSuccess(){
-  let wrapper = document.getElementById('successWrapper');
-  wrapper.style.display="block";
-
-  setTimeout(() => {
-    wrapper.style.display="none";
-  }, 2000)
-}
 
 function showMessageByID(id){
   let alertWrapper = document.getElementById(id);

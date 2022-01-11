@@ -5,7 +5,7 @@ body {
 .mySlides {
   display: none
 }
-.alert-content-wrapper{
+.alert-content-wrapper,.success-content-wrapper{
   position: fixed;
   top: 10px;
   z-index: 100;
