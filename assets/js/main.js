@@ -78,6 +78,18 @@ function validateEmail(email){
 
 function closeInquireForm(){
   document.getElementById('inquiryModal').style.display='none'
+
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let product_model = document.getElementById('product_model');
+  let product_quantity = document.getElementById('product_quantity');
+  let message = document.getElementById('message');
+  name.value="";
+  email.value="";
+  product_model.value="";
+  product_quantity.value="";
+  message.value="";
+
 }
 
 
