@@ -187,7 +187,7 @@ function handleInquiry(){
       successContent.innerHTML="send inquiry successfully"
       showMessageByID("successWrapper")
       closeInquireForm()
-      console.log(`send email successfully to ${contact_email}`)
+      console.log(`send email successfully to ${to_email}`)
     }else{
       alert(res.data.msg)
     }
