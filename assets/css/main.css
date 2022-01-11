@@ -1,0 +1,19 @@
+body {
+  font-family: "Lato", sans-serif
+}
+
+.mySlides {
+  display: none
+}
+.alert-content-wrapper{
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  padding-right: 50px;
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
