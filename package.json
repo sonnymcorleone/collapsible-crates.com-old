@@ -1,0 +1,23 @@
+{
+  "name": "rawhtml-plastic-crates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boytobeaman/rawhtml-plastic-crates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boytobeaman/rawhtml-plastic-crates/issues"
+  },
+  "homepage": "https://github.com/Boytobeaman/rawhtml-plastic-crates#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "html-minifier": "^4.0.0"
+  }
+}

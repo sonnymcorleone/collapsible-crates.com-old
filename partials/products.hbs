@@ -1,0 +1,33 @@
+<div class="w3-row-padding w3-padding-32">
+  {{#each products}}
+  <div class="w3-col m3 l2 w3-margin-bottom w3-display-container">
+    <div class="one-product-wrap">
+      <img src="{{firstImage}}" alt="{{short_title}}" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white w3-padding">
+        <h2 class="product-title-cat line-clamp mb-0">Folding crates - {{product_model}}</h2>
+        <h4 class="product-title my-0 w3-text-white text-ellipsis">{{short_title}}</h4>
+        <button class="w3-button w3-black inquiry-btn" data-model="{{product_model}}">Inquiry</button>
+      </div>
+      <div class="w3-display-hover w3-white w3-padding extra-product-info">
+        <div class="acf-item dimension">
+          <div class="item-key">Dimension</div>
+          <div class="item-value">{{ external_long }} * {{ external_width }} * {{ external_height }} <span
+              class="w3-right">(mm)</span></div>
+          <div class="item-value">{{ external_long_inch }} * {{ external_width_inch }} * {{ external_height_inch }}
+            <span class="w3-right">(inch)</span></div>
+        </div>
+        <div class="acf-item weight">
+          <div class="item-key">Weight </div>
+          <div class="item-value">{{ weight }} <span class="w3-right">(KG)</span></div>
+          <div class="item-value">{{ weight_lbs }} <span class="w3-right">(LBS)</span></div>
+        </div>
+        <div class="acf-item volumn">
+          <div class="item-key">Volumn </div>
+          <div class="item-value">{{ volumn }} <span class="w3-right">(L)</span></div>
+          <div class="item-value">{{ volumn_gallon }} <span class="w3-right">(L)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

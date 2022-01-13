@@ -211,13 +211,25 @@ function handleInquiry(){
 }
 
 
-ready(function(){
-  // do something
+function openInquiryModal(e){
 
+  let model = e.target.dataset.model;
+  let product_model = document.getElementById("product_model");
+  product_model.value = model
+  document.getElementById('inquiryModal').style.display='block'
+}
+
+ready(function(){
+  // send inquiry function
   let sendInquiry = document.getElementById("sendInquiry");
   sendInquiry.addEventListener("click", handleInquiry)
 
+  // open inquiry model event
+  let openInquiries = document.querySelectorAll(".inquiry-btn");
+  for (let i = 0; i < openInquiries.length; i++) {
+    openInquiries[i].addEventListener('click', openInquiryModal);
+  }
+
   getClientIp()
   
-
 });
