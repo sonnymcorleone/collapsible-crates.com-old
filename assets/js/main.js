@@ -231,5 +231,9 @@ ready(function(){
   }
 
   getClientIp()
+
+  let lazyLoadInstance = new LazyLoad({
+    // Your custom settings go here
+  });
   
 });
