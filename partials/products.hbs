@@ -1,16 +1,20 @@
-<div class="w3-row-padding w3-padding-32">
+<div class="w3-section w3-row-padding">
   {{#each products}}
-  <div class="w3-col m3 l2 w3-margin-bottom w3-display-container">
+  <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
     <div class="one-product-wrap">
       <div class="product-img-wrap">
         <img src="{{firstImage}}" alt="{{short_title}}" style="width:100%" class="w3-hover-opacity">
       </div>
       <div class="w3-container w3-white w3-padding">
-        <h2 class="product-title-cat line-clamp mb-0">Folding crates - {{product_model}}</h2>
+        <h2 class="product-title-cat line-clamp my-0">Folding crates - {{product_model}}</h2>
         <h4 class="product-title my-0 w3-text-white text-ellipsis">{{short_title}}</h4>
-        <button class="w3-button w3-black inquiry-btn" data-model="{{product_model}}">Inquiry</button>
+        <div class="w3-display-container">
+          <button class="w3-button w3-black w3-small inquiry-btn" data-model="{{product_model}}">Inquiry</button>
+          <span class="w3-tag w3-light-blue w3-display-right w3-hide-medium w3-hide-large">Detail</span>
+        </div>
+        
       </div>
-      <div class="w3-display-hover w3-white w3-padding extra-product-info">
+      <div class="w3-display-hover w3-white w3-padding extra-product-info w3-card">
         <div class="acf-item dimension">
           <div class="item-key">Dimension</div>
           <div class="item-value">{{ external_long }} * {{ external_width }} * {{ external_height }} <span
