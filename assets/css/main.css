@@ -46,6 +46,16 @@ body {
 .one-product-wrap{
   position: relative;
 }
+.product-img-wrap{
+  position: relative;
+  height: 200px;
+  background-color: #fff;
+}
+.product-img-wrap img{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 .extra-product-info{
   position: absolute;
   width: 100%;

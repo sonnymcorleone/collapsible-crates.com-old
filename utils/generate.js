@@ -29,15 +29,29 @@ const pageData = require("../assets/data/page-data.json")
 const productsData = require("../assets/data/folding-crates.json")
 productsData.forEach(product => {
 
-  if(product.images){
-    let regex = new RegExp(`${originalDomain}/`,"g");
-    product.images = product.images.replace(regex, `${cdnDomain}/${mediumPrex}`)
+  // if(product.images){
+  //   let regex = new RegExp(`${originalDomain}/`,"g");
+  //   product.images = product.images.replace(regex, `${cdnDomain}/${smallPrex}`)
+  // }
+
+
+  let regex = new RegExp(`${originalDomain}/`,"g");
+  let firstImageObj = product.images_arr[0]
+  let firstImage='';
+
+  if(firstImageObj){
+    firstImage=firstImageObj.url;
+    if(firstImageObj.width < 500){
+      firstImage = firstImage.replace(regex, `${cdnDomain}/`)
+    }else{
+      firstImage = firstImage.replace(regex, `${cdnDomain}/${smallPrex}`)
+    }
   }
-
-  let imageArr = product.images.split(",")
-
-  let firstImage = imageArr[0]
+  
+  
   // let firstImage = `./assets/images/aa.png`
+  
+
   product.firstImage = firstImage;
 
   product.external_long = product['all_attributes_&_external_long'];
