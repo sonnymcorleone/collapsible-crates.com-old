@@ -102,6 +102,9 @@ body {
   }
 }
 @media (max-width: 767.98px) { 
+  #banner{
+    height: 160px
+  }
   .products-wrapper .w3-section div:nth-child(odd){
     padding-left: 0;
   }
