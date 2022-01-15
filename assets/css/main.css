@@ -24,6 +24,9 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+.bg-trans-black{
+  background-color: rgba(0,0,0, 0.6);
+}
 .product-title-cat{
   font-size: 14px;
   height: 42px;
@@ -54,7 +57,7 @@ body {
 
 .one-product-wrap:hover{
   box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
-  transform: scale(1.15);
+  transform: scale(1.1);
   z-index: 2;
 }
 .product-img-wrap{
@@ -66,6 +69,11 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+}
+.inquiry-btn{
+  position: absolute;
+  top: -34px;
+  left: 0;
 }
 .extra-product-info{
   position: absolute;

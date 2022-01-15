@@ -11,19 +11,34 @@ const inquiry_api_success_code = 0;
 
 
 // Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
+let myIndex = 0;
+let mySliderTimeout= null;
+let mySliders = document.getElementsByClassName("mySlides");
 carousel();
 
+function plusDivs(num) {
+  clearTimeout(mySliderTimeout)
+
+  console.log(myIndex,"first")
+  myIndex+=num;
+  myIndex+=-1;
+  console.log(myIndex,"second")
+  if(myIndex <= -1){
+    myIndex = mySliders.length -1
+  }
+  carousel()
+}
+
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  let i;
+  
+  for (i = 0; i < mySliders.length; i++) {
+    mySliders[i].style.display = "none";
   }
   myIndex++;
-  if (myIndex > x.length) { myIndex = 1 }
-  x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 4000);
+  if (myIndex > mySliders.length) { myIndex = 1 }
+  mySliders[myIndex - 1].style.display = "block";
+  mySliderTimeout = setTimeout(carousel, 24000);
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
