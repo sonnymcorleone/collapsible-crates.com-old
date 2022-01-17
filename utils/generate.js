@@ -82,6 +82,13 @@ productsData.forEach(product => {
 
 pageData.products = productsData;
 
+let productsPerPage = 12;
+pageData.productsPerPage = productsPerPage;
+
+let productsPagesNumber = Math.ceil(productsData.length / productsPerPage);
+let productsPages = Array.from(Array(productsPagesNumber)).map((item, index) => ({number: index+1}))
+pageData.productsPages = productsPages;
+
 const template = Handlebars.compile(layout);
 
 let htmlStr = template(pageData);

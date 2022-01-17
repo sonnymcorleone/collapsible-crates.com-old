@@ -1,6 +1,7 @@
-<div class="w3-section w3-row-padding">
+<div class="w3-section w3-row-padding" id="productsWraper">
+  <input type="hidden" id="productsPerPage" value="{{productsPerPage}}">
   {{#each products}}
-  <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+  <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
     <div class="one-product-wrap">
       <div class="product-img-wrap">
         <img class="lazy" data-src="{{firstImage}}" alt="{{short_title}}" style="width:100%" class="w3-hover-opacity">
@@ -36,4 +37,13 @@
     </div>
   </div>
   {{/each}}
+
+
+  <div class="w3-bar">
+    <a class="w3-button" id="buttonPrev">&laquo;</a>
+    {{#each productsPages}}
+      <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
+    {{/each}}
+    <a class="w3-button" id="buttonNext">&raquo;</a>
+  </div>
 </div>
