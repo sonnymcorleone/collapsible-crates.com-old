@@ -238,7 +238,7 @@ function Pagination() {
   const prevButton = document.getElementById('buttonPrev');
   const nextButton = document.getElementById('buttonNext');
   const products = document.querySelectorAll(".one-product-outer-wrap");
-  const pages = document.querySelectorAll(".every-page")
+  const paginations = document.querySelectorAll(".pagination-wrap")
   let currentPage = 1;
   let productsPerPage = document.getElementById("productsPerPage").getAttribute("value");
   if(productsPerPage){
@@ -265,9 +265,12 @@ function Pagination() {
     prevButton.addEventListener('click', prevPage);
     nextButton.addEventListener('click', nextPage);
 
-    pages.forEach((item, index) => {
-      item.addEventListener('click', () => { changePage.call(this, index+1) });
-    })   
+    paginations.forEach((item) => {
+      let pages = item.querySelectorAll(".every-page")
+      pages.forEach((item, index) => {
+        item.addEventListener('click', () => { changePage.call(this, index+1) });
+      })
+    })
   }
 
 
@@ -287,13 +290,18 @@ function Pagination() {
       }
     })
 
-    pages.forEach((item, index) => {
-      if(index === page -1){
-        item.classList.add("w3-black");
-      }else{
-        item.classList.remove("w3-black");
-      }
+    paginations.forEach((item) => {
+      let pages = item.querySelectorAll(".every-page")
+      pages.forEach((item, index) => {
+        if(index === page -1){
+          item.classList.add("w3-black");
+        }else{
+          item.classList.remove("w3-black");
+        }
+      })
     })
+
+    
   }
 
   this.init = function(){

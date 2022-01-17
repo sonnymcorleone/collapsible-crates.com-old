@@ -91,34 +91,6 @@
   </div>
   <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-    <!-- The Band Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-      <h2 class="w3-wide">THE BAND</h2>
-      <p class="w3-opacity"><i>We love music</i></p>
-      <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-        deserunt mollit anim id est laborum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Name</p>
-          <img src="https://www.w3schools.com/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
-        </div>
-      </div>
-    </div>
-
     <!-- The Tour Section -->
     <div class="w3-blue-gray" id="products">
       <div class="w3-container">
@@ -126,8 +98,20 @@
         
 
         <div class="products-wrapper">
-          <div class="w3-section w3-row-padding">
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+          <div class="w3-section w3-row-padding" id="productsWraper">
+            <input type="hidden" id="productsPerPage" value="12">
+          
+            <div class="w3-bar w3-hide-medium w3-hide-large w3-margin-bottom pagination-wrap">
+              <a class="w3-button" id="buttonPrev">&laquo;</a>
+                <a class="w3-button every-page" data-number="1">1</a>
+                <a class="w3-button every-page" data-number="2">2</a>
+                <a class="w3-button every-page" data-number="3">3</a>
+                <a class="w3-button every-page" data-number="4">4</a>
+                <a class="w3-button every-page" data-number="5">5</a>
+              <a class="w3-button" id="buttonNext">&raquo;</a>
+            </div>
+          
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_403022_W_5_1ecc87d274" alt="foldable storage" style="width:100%" class="w3-hover-opacity">
@@ -156,12 +140,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">18 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">4.76 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">4.76 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_TY_604030_W_2_08725e56d4" alt="plastic collapsible storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -190,12 +174,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">55 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">14.53 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">14.53 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604018_W_3_0_9f58b8406a" alt="plastic folding storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -224,12 +208,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">32 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">8.45 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">8.45 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/ventilated_folding_crate_JOIN_TY_604011_W_S_7_4418aef199" alt="collapsible crates plastic" style="width:100%" class="w3-hover-opacity">
@@ -258,12 +242,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">20 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">5.28 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">5.28 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604014_W_H_4_b89775ccf9" alt="collapsible storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -292,12 +276,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">24 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">6.34 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">6.34 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_TY_604025_W_S_2_aeb4c3b206" alt="foldable bins" style="width:100%" class="w3-hover-opacity">
@@ -326,12 +310,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">49 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">12.95 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">12.95 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604014_W_2_1_4565cf735f" alt="collapsible plastic container manufacturers" style="width:100%" class="w3-hover-opacity">
@@ -360,12 +344,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">24 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">6.34 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">6.34 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604028_W_3_4_4817eea8ad" alt="collapsible boxes plastic" style="width:100%" class="w3-hover-opacity">
@@ -394,12 +378,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">52 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">13.74 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">13.74 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_605034_W_10_95419fb7d1" alt="foldable vegetable crates" style="width:100%" class="w3-hover-opacity">
@@ -428,12 +412,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">82 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">21.66 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">21.66 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_TY_604015_W_S_4_6e2ff839f6" alt="collapsible storage containers" style="width:100%" class="w3-hover-opacity">
@@ -462,12 +446,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">30 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">7.93 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">7.93 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_TY_604021_W_S_4_c377882e0a" alt="stackable folding crate" style="width:100%" class="w3-hover-opacity">
@@ -496,12 +480,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">40 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">10.57 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">10.57 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604034_C_1_6_9cc54bf2fe" alt="foldable storage containers" style="width:100%" class="w3-hover-opacity">
@@ -530,12 +514,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">63 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.64 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.64 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604018_W_2_1_070b80075e" alt="foldable turnover box" style="width:100%" class="w3-hover-opacity">
@@ -564,12 +548,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">32 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">8.45 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">8.45 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_4835265_C_4_ccc3a1b6fe" alt="storage crates plastic" style="width:100%" class="w3-hover-opacity">
@@ -598,12 +582,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">35 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">9.25 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">9.25 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_482830_W_5_d57abb5d1b" alt="moving foldable crate" style="width:100%" class="w3-hover-opacity">
@@ -632,12 +616,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">30 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">7.93 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">7.93 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_4835265_C_0_515be715a3" alt="plastic mesh containers" style="width:100%" class="w3-hover-opacity">
@@ -666,12 +650,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">35 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">9.25 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">9.25 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_6040295_C_1_0_8030ec2447" alt="small collapsible crates" style="width:100%" class="w3-hover-opacity">
@@ -700,12 +684,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">54 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">14.27 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">14.27 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_6040255_W_8_4_64acdfcf90" alt="plastic collapsible crates" style="width:100%" class="w3-hover-opacity">
@@ -734,12 +718,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_483525_W_0_1c3cddd3e1" alt="plastic storage crates" style="width:100%" class="w3-hover-opacity">
@@ -768,12 +752,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">35 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">9.25 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">9.25 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_6040285_W_1_1_c17cc4c059" alt="folding storage bins" style="width:100%" class="w3-hover-opacity">
@@ -802,12 +786,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">52 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">13.74 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">13.74 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_403024_W_2_0770644132" alt="collapsible plastic storage crates" style="width:100%" class="w3-hover-opacity">
@@ -836,12 +820,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">21.5 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">5.68 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">5.68 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_403014_W_1_a9f56e8355" alt="heavy duty folding corrugated plastic box" style="width:100%" class="w3-hover-opacity">
@@ -870,12 +854,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">11 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">2.91 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">2.91 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_483525_W_11_8f4a7939c3" alt="plastic collapsible containers" style="width:100%" class="w3-hover-opacity">
@@ -904,12 +888,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">35 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">9.25 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">9.25 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_TY_403017_W_5_5ac2a2540e" alt="foldable plastic crates" style="width:100%" class="w3-hover-opacity">
@@ -938,12 +922,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">14 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">3.70 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">3.70 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_805850_W_7_7d2c48cf21" alt="foldable crates for groceries" style="width:100%" class="w3-hover-opacity">
@@ -972,12 +956,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">187 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">49.41 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">49.41 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_403024_W_5_004ac3a773" alt="collapsible bins" style="width:100%" class="w3-hover-opacity">
@@ -1006,12 +990,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">21 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">5.55 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">5.55 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_302012_W_1_8fb87056c6" alt="collapsible plastic crates with lids" style="width:100%" class="w3-hover-opacity">
@@ -1040,12 +1024,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">5 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">1.32 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">1.32 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_6040265_C_8_3_4a82788c24" alt="foldable plastic container" style="width:100%" class="w3-hover-opacity">
@@ -1074,12 +1058,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">48 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">12.68 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">12.68 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604022_W_3_5_5d969e8f9e" alt="plastic folding box" style="width:100%" class="w3-hover-opacity">
@@ -1108,12 +1092,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">40 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">10.57 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">10.57 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_403025_C_5_1c166be42d" alt="collapsable containers" style="width:100%" class="w3-hover-opacity">
@@ -1142,12 +1126,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">21.5 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">5.68 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">5.68 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_805850_W_1_202a4a5efd" alt="fold flat crate" style="width:100%" class="w3-hover-opacity">
@@ -1176,12 +1160,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">187 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">49.41 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">49.41 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_403014_W_0_de670db9b2" alt="collapsible storage crate" style="width:100%" class="w3-hover-opacity">
@@ -1210,12 +1194,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">11 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">2.91 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">2.91 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_403024_W_0_6160dc833e" alt="collapsing container" style="width:100%" class="w3-hover-opacity">
@@ -1244,12 +1228,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">21 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">5.55 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">5.55 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604024_W_4_6_afb58f1a7d" alt="collapsible storage bins" style="width:100%" class="w3-hover-opacity">
@@ -1278,12 +1262,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_604034_W_5_3e7b4f39d6" alt="fold up crates" style="width:100%" class="w3-hover-opacity">
@@ -1312,12 +1296,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">64 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.91 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.91 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_533631_C_0_c3d1ebc238" alt="foldable crate" style="width:100%" class="w3-hover-opacity">
@@ -1346,12 +1330,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">46 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">12.15 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">12.15 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_5336295_W_1_5b0b4c2793" alt="folding box" style="width:100%" class="w3-hover-opacity">
@@ -1380,12 +1364,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604014_W_3_6_5256a1fa87" alt="foldable plastic box" style="width:100%" class="w3-hover-opacity">
@@ -1414,12 +1398,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">24 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">6.34 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">6.34 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_5336295_W_4_d7c110fa3c" alt="folding crate manufacturer" style="width:100%" class="w3-hover-opacity">
@@ -1448,12 +1432,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_5336295_W_4_c257b319a4" alt="folding plastic basket" style="width:100%" class="w3-hover-opacity">
@@ -1482,12 +1466,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_5336295_W_0_37b8829387" alt="PP plastic folding box" style="width:100%" class="w3-hover-opacity">
@@ -1516,12 +1500,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_1004034_C_1_58bc939a32" alt="collapsible plastic storage boxes with lids" style="width:100%" class="w3-hover-opacity">
@@ -1550,12 +1534,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">110 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">29.06 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">29.06 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604024_W_4_6_4e5cdf33b5" alt="vented plastic crates" style="width:100%" class="w3-hover-opacity">
@@ -1584,12 +1568,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">45 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">11.89 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">11.89 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604033_W_1_0_038f68d767" alt="Durable foldable plastic storage box for wholesale" style="width:100%" class="w3-hover-opacity">
@@ -1618,12 +1602,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">63 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.64 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.64 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604020_W_3_0_ae49e0e009" alt="folding storage bin" style="width:100%" class="w3-hover-opacity">
@@ -1652,12 +1636,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">30 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">7.93 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">7.93 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_604030_W_3_6ba5c0bf1e" alt="folding plastic storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -1686,12 +1670,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">56 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">14.80 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">14.80 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KK_604032_W_3_7_666481dd2a" alt="collapsible crates storage" style="width:100%" class="w3-hover-opacity">
@@ -1720,12 +1704,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">61 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.12 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.12 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_4835265_C_0_772b5a4b1a" alt="large plastic bins" style="width:100%" class="w3-hover-opacity">
@@ -1754,12 +1738,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">35 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">9.25 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">9.25 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KS_604034_C_1_6_183727beb8" alt="heavy duty folding storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -1788,12 +1772,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">63 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.64 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.64 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604018_W_H_4_131900e452" alt="fold up storage boxes" style="width:100%" class="w3-hover-opacity">
@@ -1822,12 +1806,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">32 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">8.45 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">8.45 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_6040340_C_3_9fe8f101ae" alt="plastic storage boxes with folding lids" style="width:100%" class="w3-hover-opacity">
@@ -1856,12 +1840,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">55 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">14.53 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">14.53 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_533631_C_8_2dac3ae8d8" alt="folding collapsible storage box" style="width:100%" class="w3-hover-opacity">
@@ -1890,12 +1874,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">46 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">12.15 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">12.15 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_403018_W_0_218add9a58" alt="color customized foldable plastic container" style="width:100%" class="w3-hover-opacity">
@@ -1924,12 +1908,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">17 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">4.49 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">4.49 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604026_W_3_5_ae5d91df3c" alt="plastic collapsible boxes" style="width:100%" class="w3-hover-opacity">
@@ -1958,12 +1942,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">48 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">12.68 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">12.68 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_605017_W_8_67905fce11" alt="plastic crate foldable" style="width:100%" class="w3-hover-opacity">
@@ -1992,12 +1976,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">38 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">10.04 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">10.04 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_403012_W_0_7a4ca9ed6b" alt="foldable pp box" style="width:100%" class="w3-hover-opacity">
@@ -2026,12 +2010,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">10 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">2.64 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">2.64 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KB_604034_C_1_41832566a8" alt="polymer logistics collapsible storage" style="width:100%" class="w3-hover-opacity">
@@ -2060,12 +2044,12 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">64 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">16.91 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">16.91 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container">
+            <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
               <div class="one-product-wrap">
                 <div class="product-img-wrap">
                   <img class="lazy" data-src="https://d3mel6hyuleyuo.cloudfront.net/small_ventilated_folding_crate_JOIN_KN_604022_W_H_0_79c77d5208" alt="foldable tote bin" style="width:100%" class="w3-hover-opacity">
@@ -2094,10 +2078,21 @@
                   <div class="acf-item volumn">
                     <div class="item-key">Volumn </div>
                     <div class="item-value">40 <span class="w3-right">(L)</span></div>
-                    <div class="item-value">10.57 <span class="w3-right">(L)</span></div>
+                    <div class="item-value">10.57 <span class="w3-right">(GALLON)</span></div>
                   </div>
                 </div>
               </div>
+            </div>
+          
+          
+            <div class="w3-bar pagination-wrap">
+              <a class="w3-button" id="buttonPrev">&laquo;</a>
+                <a class="w3-button every-page" data-number="1">1</a>
+                <a class="w3-button every-page" data-number="2">2</a>
+                <a class="w3-button every-page" data-number="3">3</a>
+                <a class="w3-button every-page" data-number="4">4</a>
+                <a class="w3-button every-page" data-number="5">5</a>
+              <a class="w3-button" id="buttonNext">&raquo;</a>
             </div>
           </div>        </div>
       </div>
@@ -2136,10 +2131,10 @@
       <h2 class="w3-wide w3-center">CONTACT</h2>
       <div class="w3-row w3-padding-32">
         <div class="w3-col m6 w3-large w3-margin-bottom">
-          <strong>Emma Zhang</strong>
+          <i class="fa fa-user" style="width:30px"></i><strong>Emma Zhang</strong><br>
           <i class="fa fa-map-marker" style="width:30px"></i> Shanghai, China<br>
           <i class="fa fa-phone" style="width:30px"></i> Phone: +086 13405661729<br>
-          <i class="fa fa-envelope" style="width:30px"> </i> Email: inquiry@joinplastic.com<br>
+          <i class="fa fa-envelope" style="width:30px"> </i> Email: <a href="mailto:inquiry@joinplastic.com?subject=Inquiry about collapsible crates">inquiry@joinplastic.com</a><br>
         </div>
         <div class="w3-col m6">
           <img src="/assets/images/collapsible-crates-salesman.jpg" alt="collapsible crates salesman" class="w3-image">
