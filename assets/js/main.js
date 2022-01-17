@@ -234,6 +234,78 @@ function openInquiryModal(e){
   document.getElementById('inquiryModal').style.display='block'
 }
 
+function Pagination() {
+  const prevButton = document.getElementById('buttonPrev');
+  const nextButton = document.getElementById('buttonNext');
+  const products = document.querySelectorAll(".one-product-outer-wrap");
+  const pages = document.querySelectorAll(".every-page")
+  let currentPage = 1;
+  let productsPerPage = document.getElementById("productsPerPage").getAttribute("value");
+  if(productsPerPage){
+    productsPerPage = Number(productsPerPage)
+  }
+
+  let prevPage = function () {
+    if(currentPage <= 1){
+      return
+    }
+    currentPage = currentPage - 1;
+    changePage(currentPage)
+  }
+
+  let nextPage = function () {
+    if(currentPage >= pages.length){
+      return
+    }
+    currentPage = currentPage + 1;
+    changePage(currentPage)
+  }
+
+  let addEventListeners = function() {
+    prevButton.addEventListener('click', prevPage);
+    nextButton.addEventListener('click', nextPage);
+
+    pages.forEach((item, index) => {
+      item.addEventListener('click', () => { changePage.call(this, index+1) });
+    })   
+  }
+
+
+  let changePage = function(page) {
+    console.log(page)
+    console.log(typeof page)
+    currentPage = page;
+    
+    let visibleStart = (page - 1 ) * productsPerPage;
+    let visibleEnd = page * productsPerPage;
+
+    products.forEach((item, index) => {
+      if(index >= visibleStart && index < visibleEnd){
+        item.style.display="block"
+      }else{
+        item.style.display="none"
+      }
+    })
+
+    pages.forEach((item, index) => {
+      if(index === page -1){
+        item.classList.add("w3-black");
+      }else{
+        item.classList.remove("w3-black");
+      }
+    })
+  }
+
+  this.init = function(){
+    changePage(1);
+    // pageNumbers();
+    // selectedPage();
+    // clickPage();
+    addEventListeners();
+  }
+
+}
+
 ready(function(){
   // send inquiry function
   let sendInquiry = document.getElementById("sendInquiry");
@@ -250,5 +322,7 @@ ready(function(){
   let lazyLoadInstance = new LazyLoad({
     // Your custom settings go here
   });
+  let pagination = new Pagination();
+  pagination.init();
   
 });
