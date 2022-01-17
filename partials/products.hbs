@@ -1,5 +1,14 @@
 <div class="w3-section w3-row-padding" id="productsWraper">
   <input type="hidden" id="productsPerPage" value="{{productsPerPage}}">
+
+  <div class="w3-bar w3-hide-medium w3-hide-large">
+    <a class="w3-button" id="buttonPrev">&laquo;</a>
+    {{#each productsPages}}
+      <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
+    {{/each}}
+    <a class="w3-button" id="buttonNext">&raquo;</a>
+  </div>
+
   {{#each products}}
   <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
     <div class="one-product-wrap">
