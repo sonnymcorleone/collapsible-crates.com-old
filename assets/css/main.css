@@ -70,7 +70,7 @@ body {
   top: 50%;
   transform: translate(0, -50%);
 }
-.inquiry-btn{
+#productsWraper .inquiry-btn{
   position: absolute;
   top: -34px;
   left: 0;
@@ -108,10 +108,10 @@ body {
   #factorySlider{
     height: 180px;
   }
-  .products-wrapper .w3-section div:nth-child(odd){
+  .products-wrapper .product-list-wrap div.one-product-outer-wrap:nth-child(odd){
     padding-left: 0;
   }
-  .products-wrapper .w3-section div:nth-child(even){
+  .products-wrapper .product-list-wrap div.one-product-outer-wrap:nth-child(even){
     padding-right: 0;
   }
 }

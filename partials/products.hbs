@@ -1,58 +1,72 @@
-<div class="w3-section w3-row-padding" id="productsWraper">
+<div class="w3-section" id="productsWraper">
   <input type="hidden" id="productsPerPage" value="{{productsPerPage}}">
-
-  <div class="w3-bar w3-hide-medium w3-hide-large w3-margin-bottom pagination-wrap">
-    <a class="w3-button" id="buttonPrev">&laquo;</a>
-    {{#each productsPages}}
-      <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
-    {{/each}}
-    <a class="w3-button" id="buttonNext">&raquo;</a>
+  <div class="w3-container w3-center">
+    <div style="max-width: 900px;margin:0 auto;">
+      <p>The Collapsible Boxes are widely used in Fruit and Vegetable industry, Logistics industry, Pharmacy industry,
+        Automobile parts industry, Electronic component industry, Chain Supermarket, etc.</p>
+      <h4>OEM & ODM service available</h4>
+    </div>
+    <p class="w3-text-blue-gray mb-0">The foldable plastic crates are excellent for cooling and protecting perishable
+      produce.</p>
   </div>
 
-  {{#each products}}
-  <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
-    <div class="one-product-wrap">
-      <div class="product-img-wrap">
-        <img class="lazy" data-src="{{firstImage}}" alt="{{short_title}}" style="width:100%" class="w3-hover-opacity">
-      </div>
-      <div class="w3-container w3-display-container w3-white w3-padding">
-        <h2 class="product-title-cat line-clamp my-0">Folding crates - {{product_model}}</h2>
-        <h4 class="product-title my-0 w3-text-white text-ellipsis">{{short_title}}</h4>
-        <button class="w3-button w3-black w3-small inquiry-btn" data-model="{{product_model}}">Inquiry</button>
-        <div class="w3-display-container">
-          <span class="w3-tag w3-light-blue w3-hide-medium w3-hide-large">Detail</span>
+  <div class="w3-bar w3-hide-medium w3-hide-large w3-margin-bottom pagination-wrap">
+    <a class="w3-button button-prev folding-list">&laquo;</a>
+    {{#each productsPages}}
+    <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
+    {{/each}}
+    <a class="w3-button button-next folding-list">&raquo;</a>
+  </div>
+
+  <div class="w3-row-padding product-list-wrap">
+    {{#each products}}
+    <div class="w3-col s6 m4 l2 w3-margin-bottom w3-display-container one-product-outer-wrap">
+      <div class="one-product-wrap">
+        <div class="product-img-wrap">
+          <img class="lazy" data-src="{{firstImage}}" alt="{{short_title}}" style="width:100%" class="w3-hover-opacity">
         </div>
-        
-      </div>
-      <div class="w3-display-hover w3-white w3-padding extra-product-info w3-card">
-        <div class="acf-item dimension">
-          <div class="item-key">Dimension</div>
-          <div class="item-value">{{ external_long }} * {{ external_width }} * {{ external_height }} <span
-              class="w3-right">(mm)</span></div>
-          <div class="item-value">{{ external_long_inch }} * {{ external_width_inch }} * {{ external_height_inch }}
-            <span class="w3-right">(inch)</span></div>
+        <div class="w3-container w3-display-container w3-white w3-padding">
+          <h2 class="product-title-cat line-clamp my-0">Folding crates - {{product_model}}</h2>
+          <h4 class="product-title my-0 w3-text-white text-ellipsis">{{short_title}}</h4>
+          <button class="w3-button w3-black w3-small inquiry-btn" data-model="{{product_model}}">Inquiry</button>
+          <div class="w3-display-container">
+            <span class="w3-tag w3-light-blue w3-hide-medium w3-hide-large">Detail</span>
+          </div>
+
         </div>
-        <div class="acf-item weight">
-          <div class="item-key">Weight </div>
-          <div class="item-value">{{ weight }} <span class="w3-right">(KG)</span></div>
-          <div class="item-value">{{ weight_lbs }} <span class="w3-right">(LBS)</span></div>
-        </div>
-        <div class="acf-item volumn">
-          <div class="item-key">Volumn </div>
-          <div class="item-value">{{ volumn }} <span class="w3-right">(L)</span></div>
-          <div class="item-value">{{ volumn_gallon }} <span class="w3-right">(GALLON)</span></div>
+        <div class="w3-display-hover w3-white w3-padding extra-product-info w3-card">
+          <div class="acf-item dimension">
+            <div class="item-key">Dimension</div>
+            <div class="item-value">{{ external_long }} * {{ external_width }} * {{ external_height }} <span
+                class="w3-right">(mm)</span></div>
+            <div class="item-value">{{ external_long_inch }} * {{ external_width_inch }} * {{ external_height_inch }}
+              <span class="w3-right">(inch)</span>
+            </div>
+          </div>
+          <div class="acf-item weight">
+            <div class="item-key">Weight </div>
+            <div class="item-value">{{ weight }} <span class="w3-right">(KG)</span></div>
+            <div class="item-value">{{ weight_lbs }} <span class="w3-right">(LBS)</span></div>
+          </div>
+          <div class="acf-item volumn">
+            <div class="item-key">Volumn </div>
+            <div class="item-value">{{ volumn }} <span class="w3-right">(L)</span></div>
+            <div class="item-value">{{ volumn_gallon }} <span class="w3-right">(GALLON)</span></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  {{/each}}
-
-
-  <div class="w3-bar pagination-wrap">
-    <a class="w3-button" id="buttonPrev">&laquo;</a>
-    {{#each productsPages}}
-      <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
     {{/each}}
-    <a class="w3-button" id="buttonNext">&raquo;</a>
+  </div>
+
+
+  <p class="w3-text-blue-gray my-0 text-ellipsis">The foldable containers are designed to fold flat when not in use. Ideal for every
+    day storage & organization</p>
+  <div class="w3-bar pagination-wrap">
+    <a class="w3-button button-prev folding-list">&laquo;</a>
+    {{#each productsPages}}
+    <a class="w3-button every-page" data-number="{{number}}">{{number}}</a>
+    {{/each}}
+    <a class="w3-button button-next folding-list">&raquo;</a>
   </div>
 </div>

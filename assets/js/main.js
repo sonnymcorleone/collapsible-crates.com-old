@@ -152,12 +152,13 @@ function handleInquiry(){
 
   let product_model = document.getElementById('product_model');
 
-  if(!product_model.value){
-    alertContent.innerHTML = `Product model is required`
-    product_model.focus()
-    showMessageByID("alertWrapper")
-    return
-  }
+  // 可以不输入 product model, 可能客户需要自定义产品
+  // if(!product_model.value){
+  //   alertContent.innerHTML = `Product model is required`
+  //   product_model.focus()
+  //   showMessageByID("alertWrapper")
+  //   return
+  // }
   postData.product_model = product_model.value;
 
   let product_quantity = document.getElementById('product_quantity');
@@ -228,17 +229,18 @@ function handleInquiry(){
 
 function openInquiryModal(e){
 
-  let model = e.target.dataset.model;
+  let model = e.target.dataset.model || "";
   let product_model = document.getElementById("product_model");
   product_model.value = model
   document.getElementById('inquiryModal').style.display='block'
 }
 
 function Pagination() {
-  const prevButton = document.getElementById('buttonPrev');
-  const nextButton = document.getElementById('buttonNext');
+  const prevButtons = document.querySelectorAll('.button-prev.folding-list');
+  const nextButtons = document.querySelectorAll('.button-next.folding-list');
   const products = document.querySelectorAll(".one-product-outer-wrap");
   const paginations = document.querySelectorAll(".pagination-wrap")
+  let pageLength = 0;
   let currentPage = 1;
   let productsPerPage = document.getElementById("productsPerPage").getAttribute("value");
   if(productsPerPage){
@@ -254,7 +256,7 @@ function Pagination() {
   }
 
   let nextPage = function () {
-    if(currentPage >= pages.length){
+    if(currentPage >= pageLength){
       return
     }
     currentPage = currentPage + 1;
@@ -262,11 +264,16 @@ function Pagination() {
   }
 
   let addEventListeners = function() {
-    prevButton.addEventListener('click', prevPage);
-    nextButton.addEventListener('click', nextPage);
+    prevButtons.forEach(item => {
+      item.addEventListener('click', prevPage);
+    })
+    nextButtons.forEach(item => {
+      item.addEventListener('click', nextPage);
+    })
 
     paginations.forEach((item) => {
       let pages = item.querySelectorAll(".every-page")
+      pageLength = pages.length;
       pages.forEach((item, index) => {
         item.addEventListener('click', () => { changePage.call(this, index+1) });
       })
@@ -275,8 +282,6 @@ function Pagination() {
 
 
   let changePage = function(page) {
-    console.log(page)
-    console.log(typeof page)
     currentPage = page;
     
     let visibleStart = (page - 1 ) * productsPerPage;
