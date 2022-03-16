@@ -69,6 +69,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  max-width: 100%;
 }
 #productsWraper .inquiry-btn{
   position: absolute;
