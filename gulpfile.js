@@ -79,12 +79,6 @@ function devImages() {
   );
 }
 
-function devImages() {
-  return src(`${options.paths.src.img}/**/*`).pipe(
-    dest(options.paths.dist.img)
-  );
-}
-
 function devFonts() {
   return src(`${options.paths.src.fonts}/**/*`).pipe(
     dest(options.paths.dist.fonts)
