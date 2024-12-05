@@ -102,6 +102,11 @@ body {
       transform: none;
   }
 }
+
+
+.section-header{
+  font-weight: bold;
+}
 @media (max-width: 767.98px) { 
   #banner{
     height: 160px;
@@ -114,6 +119,9 @@ body {
   }
   .products-wrapper .product-list-wrap div.one-product-outer-wrap:nth-child(even){
     padding-right: 0;
+  }
+  .section-header{
+    font-size: 18px;
   }
 }
 
