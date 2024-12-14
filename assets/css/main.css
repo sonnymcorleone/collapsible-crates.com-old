@@ -17,8 +17,19 @@ body {
 .mb-0{
   margin-bottom: 0;
 }
+.pt-0{
+  padding-top: 0!important;
+}
 .pb-0{
   padding-bottom: 0!important;
+}
+.px-7{
+  padding-left: 1.75rem; /* 28px */
+  padding-right: 1.75rem; /* 28px */
+}
+.px-8{
+  padding-left: 2rem; /* 32px */
+  padding-right: 2rem; /* 32px */
 }
 .mt-0{
   margin-top: 0;
@@ -39,6 +50,9 @@ body {
 }
 .h-full{
   height: 100%;
+}
+.w-full{
+  width: 100%;
 }
 
 /* .hover:bg-slate-500:hover {
