@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about us</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./css/w3.css" />
+</head>
+<body>
+  <h1>about us</h1>
+  @@include('../partials/footer.hbs')
+  @@include('../partials/test.html')
+  @@loop("../partials/loop-test.html", "../data/test.json")
+  <h2>about us end</h2>
+  <div class="w3-card">card example</div>
+
+  @@include('../partials/products.html')
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- inquiry modal -->
+<div id="inquiryModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-top w3-card-4" style="max-width: 600px;">
+    <header class="w3-container w3-blue-gray w3-padding-8">
+      <span onclick="closeInquireForm()" class="w3-button w3-blue-gray w3-large w3-display-topright">×</span>
+      <h4 class="w3-wide my-3">Inquiry</h4>
+    </header>
+    <div class="w3-container w3-margin-top">
+      <p class="mb-0"><label>Your name</label></p>
+      <input class="w3-input w3-border" id="name" type="text" placeholder="Enter name">
+      <p class="mb-0"><label>Your email</label></p>
+      <input class="w3-input w3-border" id="email" type="email" placeholder="Enter email">
+      <p class="mb-0"><label>Product model</label></p>
+      <input class="w3-input w3-border" id="product_model" type="text" placeholder="Enter product model">
+
+      <p class="mb-0"><label>Product quantity</label></p>
+      <input class="w3-input w3-border" id="product_quantity" type="text" placeholder="Enter product quantity">
+
+      <p class="mb-0"><label>Message</label></p>
+      <textarea class="w3-input w3-border" id="message" rows="2"
+        placeholder="Tell us more details about your requirements"></textarea>
+
+      <button class="w3-button w3-blue-gray w3-section" id="sendInquiry"> <i id="sendingInquiry" style="display: none;"
+          class="fa fa-spinner fa-spin fa-fw"></i> Send</button>
+      <button class="w3-button w3-black w3-section w3-right" onclick="closeInquireForm()">Close <i
+          class="fa fa-remove"></i></button>
+      <!-- <p>Email will send to: <a class=""
+          href="mailto:inquiry@joinplastic.com?subject=Inquiry about your plastic crate"><span
+            class="inquiry-email">inquiry@joinplastic.com</span></a></p> -->
+    </div>
+  </div>
+</div>
+<div class="w3-panel w3-yellow w3-col m6 l4 alert-content-wrapper clear-both" id="alertWrapper" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+  <p class="py-4" id="alertContent"></p>
+</div>
+
+<div class="w3-panel w3-yellow w3-col m6 l4 success-content-wrapper clear-both" id="successWrapper" style="display:none">
+  <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+  <p class="py-4" id="successContent"></p>
+</div>

@@ -25,7 +25,7 @@ const plugins = {
 const basePaths = ["src", "dist", "build"];
 
 // folder assets paths
-const folders = ["css", "js", "img", "fonts", "third-party"];
+const folders = ["css", "js", "img", "fonts", "third-party", "data"];
 
 const paths = {
   root: "./",

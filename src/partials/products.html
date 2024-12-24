@@ -1,0 +1,55 @@
+
+
+
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- The Tour Section -->
+  <div class="w3-blue-gray" id="products">
+    <div class="w3-container">
+      <h1 class="w3-wide w3-center py-12 text-3xl">Collapsible crates</h1>
+      <div class="w3-section" id="productsWraper">
+        <input type="hidden" id="productsPerPage" value="12">
+        <div class="w3-container w3-center">
+          <div style="max-width: 900px;margin:0 auto;">
+            <p>The Collapsible Boxes are widely used in Fruit and Vegetable industry, Logistics industry, Pharmacy industry,
+              Automobile parts industry, Electronic component industry, Chain Supermarket, etc.</p>
+            <h4 class="py-2 text-xl">OEM & ODM service available</h4>
+          </div>
+          <p class="w3-text-blue-gray mb-0">The foldable plastic crates are excellent for cooling and protecting perishable
+            produce.</p>
+        </div>
+      
+        <div class="w3-bar w3-hide-medium w3-hide-large w3-margin-bottom pagination-wrap">
+          <a class="w3-button button-prev folding-list">«</a>
+          <a class="w3-button every-page w3-black" data-number="1">1</a>
+          <a class="w3-button every-page" data-number="2">2</a>
+          <a class="w3-button every-page" data-number="3">3</a>
+          <a class="w3-button every-page" data-number="4">4</a>
+          <a class="w3-button every-page" data-number="5">5</a>
+          <a class="w3-button button-next folding-list">»</a>
+        </div>
+      
+        <div class="w3-row-padding product-list-wrap">
+          @@loop('../partials/loop-product.html', '../data/folding-crates-to-use.json')
+          <div class="w3-bar pagination-wrap">
+            <a class="w3-button button-prev folding-list">«</a>
+            <a class="w3-button every-page w3-black" data-number="1">1</a>
+            <a class="w3-button every-page" data-number="2">2</a>
+            <a class="w3-button every-page" data-number="3">3</a>
+            <a class="w3-button every-page" data-number="4">4</a>
+            <a class="w3-button every-page" data-number="5">5</a>
+            <a class="w3-button button-next folding-list">»</a>
+          </div>
+        </div>
+      
+       
+        <p class="w3-text-blue-gray my-0 text-ellipsis">The foldable containers are designed to fold flat when not in use. Ideal for every
+          day storage & organization, These foldable collapsible crate are the ultimate space-saving organization solution for transporting groceries, laundry, household items, plants, kids toys, power tools, pet supplies, and much more.
+          Keep the folding basket in the car, the garage, or pack the folding storage to take on the next picnic or camping trip.
+          our heavy duty collapsible crate is the ultimate space-saving solution that combines packing, transport and storage into one reusable, collapsible container. same as collapsible crate walmart.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,11 @@
   "version": "2.2.0",
   "description": "TailwindCSS StarterKit with Gulp 4",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-json-transform": "^0.5.0",
+    "gulp-rename": "^2.0.0",
+    "handlebars": "^4.7.8"
+  },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.0",
     "@tailwindcss/forms": "^0.5.3",

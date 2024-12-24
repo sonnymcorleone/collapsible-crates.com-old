@@ -1,9 +1,9 @@
 const options = require("./config"); //options from config.js
 
 const allPlugins = {
-  typography: require("@tailwindcss/typography"),
-  forms: require("@tailwindcss/forms"),
-  containerQueries: require("@tailwindcss/container-queries"),
+  // typography: require("@tailwindcss/typography"),
+  // forms: require("@tailwindcss/forms"),
+  // containerQueries: require("@tailwindcss/container-queries"),
 };
 
 const plugins = Object.keys(allPlugins)
@@ -16,7 +16,7 @@ const plugins = Object.keys(allPlugins)
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,php}"],
+  content: ["./src/**/*.{html,js,php,hbs}"],
   darkMode: "class",
   theme: {
     extend: {},

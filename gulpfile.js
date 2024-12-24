@@ -27,6 +27,18 @@ const pngquant = require("imagemin-pngquant"); // imagemin plugin
 const purgecss = require("gulp-purgecss"); // Remove Unused CSS from Styles
 const logSymbols = require("log-symbols"); //For Symbolic Console logs :) :P
 const includePartials = require("gulp-file-include"); //For supporting partials if required
+const jsonTransform = require('gulp-json-transform');
+const rename = require('gulp-rename');
+
+const mmToInch = 0.03937;
+const kgToLbs = 2.2046;
+const literToGallon = 0.2642;
+
+// let cdnDomain = "d3mel6hyuleyuo.cloudfront.net";
+let cdnDomain = "cdn.collapsible-crate.com";
+let originalDomain = "strapi90m.s3.us-west-1.amazonaws.com";
+let mediumPrex = "medium_";
+let smallPrex = "small_";
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -48,18 +60,28 @@ function previewReload(done) {
 
 //Development Tasks
 function devHTML() {
-  return src(`${options.paths.src.base}/**/*.html`)
-    .pipe(includePartials())
+  console.log(options.paths.src.base)
+  console.log(`===options.paths.src.base`)
+  return src([
+    `${options.paths.src.base}/pages/**/*.html`,
+  ])
+    .pipe(includePartials({
+      basepath: "src/partials/",
+    }))
     .pipe(dest(options.paths.dist.base));
 }
 
 function devStyles() {
   const tailwindcss = require("tailwindcss");
   const autoprefixer = require("autoprefixer");
-  return src(`${options.paths.src.css}/**/*.scss`)
+  return src([`${options.paths.src.css}/**/*.scss`])
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
     .pipe(concat({ path: "style.css" }))
+    .pipe(dest(options.paths.dist.css));
+}
+function devStylesCSS() {
+  return src(`${options.paths.src.css}/**/*.css`)
     .pipe(dest(options.paths.dist.css));
 }
 
@@ -93,8 +115,12 @@ function devThirdParty() {
 
 function watchFiles() {
   watch(
+    `${options.paths.src.data}/folding-crates.json`,
+    series(processJSON)
+  );
+  watch(
     `${options.paths.src.base}/**/*.{html,php}`,
-    series(devHTML, devStyles, previewReload)
+    series(devHTML, devStyles, devStylesCSS, previewReload)
   );
   watch(
     [options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`],
@@ -122,8 +148,10 @@ function devClean() {
 
 //Production Tasks (Optimized Build for Live/Production Sites)
 function prodHTML() {
-  return src(`${options.paths.src.base}/**/*.{html,php}`)
-    .pipe(includePartials())
+  return src(`${options.paths.src.base}/pages/**/*.html`)
+    .pipe(includePartials({
+      basepath: "src/partials/",
+    }))
     .pipe(dest(options.paths.build.base));
 }
 
@@ -157,6 +185,89 @@ function prodStyles() {
     // )
     .pipe(dest(options.paths.build.css));
 }
+
+function prodStylesCSS() {
+  const autoprefixer = require("autoprefixer");
+  const cssnano = require("cssnano");
+  return src(`${options.paths.src.css}/**/*.css`)
+    .pipe(
+      postcss([
+        autoprefixer(),
+        cssnano(),
+      ])
+    )
+    // .pipe(
+    //   purgecss({
+    //     ...options.config.purgecss,
+    //     defaultExtractor: (content) => {
+    //       // without arbitray selectors
+    //       // const v2Regex = /[\w-:./]+(?<!:)/g;
+    //       // with arbitray selectors
+    //       const v3Regex = /[(\([&*\])|\w)-:./]+(?<!:)/g;
+    //       const broadMatches = content.match(v3Regex) || [];
+    //       const innerMatches =
+    //         content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+    //       return broadMatches.concat(innerMatches);
+    //     },
+    //   })
+    // )
+    .pipe(dest(options.paths.build.css));
+}
+
+
+function processJSON() {
+  return src(`${options.paths.src.data}/folding-crates.json`)
+    .pipe(jsonTransform(function (data) {
+      data.forEach(function(product) {
+        let regex = new RegExp(`${originalDomain}/`,"g");
+        let firstImageObj = product.images_arr[0]
+        let firstImage='';
+
+        if(firstImageObj){
+          firstImage=firstImageObj.url;
+          if(firstImageObj.width < 500){
+            firstImage = firstImage.replace(regex, `${cdnDomain}/`)
+          }else{
+            firstImage = firstImage.replace(regex, `${cdnDomain}/${smallPrex}`)
+          }
+        }
+        
+        
+        // let firstImage = `./assets/images/aa.png`
+        
+
+        product.firstImage = firstImage;
+
+        product.external_long = product['all_attributes_&_external_long'];
+        product.external_long_inch = (product.external_long * mmToInch).toFixed(2);
+
+        product.external_width = product['all_attributes_&_external_width'];
+        product.external_width_inch = (product.external_width * mmToInch).toFixed(2);
+
+        product.external_height = product['all_attributes_&_external_height'];
+        product.external_height_inch = (product.external_height * mmToInch).toFixed(2);
+
+        product.internal_long = product['all_attributes_&_internal_long'];
+        product.internal_long_inch = (product.internal_long * mmToInch).toFixed(2);
+
+        product.internal_width = product['all_attributes_&_internal_width'];
+        product.internal_width_inch = (product.internal_width * mmToInch).toFixed(2);
+
+        product.internal_height = product['all_attributes_&_internal_height'];
+        product.internal_height_inch = (product.internal_height * mmToInch).toFixed(2);
+
+        product.weight = product['all_attributes_&_weight'];
+        product.weight_lbs = (product.weight * kgToLbs).toFixed(2);
+
+        product.volumn = product['all_attributes_&_volumn'];
+        product.volumn_gallon = (product.volumn * literToGallon).toFixed(2);
+      });
+      return data;
+    }))
+    .pipe(rename('folding-crates-to-use.json'))
+    .pipe(dest(`${options.paths.src.data}`));
+}
+
 
 function prodScripts() {
   return src([
@@ -217,7 +328,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devScripts, devImages, devFonts, devThirdParty, devHTML), //Run All tasks in parallel
+  parallel(processJSON, devStyles,devStylesCSS, devScripts, devImages, devFonts, devThirdParty, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );
@@ -225,7 +336,9 @@ exports.default = series(
 exports.prod = series(
   prodClean, // Clean Build Folder
   parallel(
+    processJSON,
     prodStyles,
+    prodStylesCSS,
     prodScripts,
     prodImages,
     prodHTML,
